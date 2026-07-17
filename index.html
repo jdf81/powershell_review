@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#121826" />
+  <meta name="description" content="An installable, offline-friendly PowerShell learning course." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>PowerShell Path</title>
+</head>
+<body>
+  <header class="topbar">
+    <button id="menuButton" class="icon-button" aria-label="Open course menu">☰</button>
+    <div>
+      <h1>PowerShell Path</h1>
+      <p>Learn automation one command at a time</p>
+    </div>
+    <button id="installButton" class="install-button" hidden>Install</button>
+  </header>
+
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="Course navigation">
+      <div class="progress-card">
+        <div class="progress-heading"><span>Course progress</span><strong id="progressText">0%</strong></div>
+        <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+        <button id="resetButton" class="text-button">Reset progress</button>
+      </div>
+      <nav id="lessonNav"></nav>
+    </aside>
+
+    <main id="courseContent" tabindex="-1">
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Beginner → Intermediate</span>
+          <h2>Automate Windows, Linux, and macOS with PowerShell</h2>
+          <p>This self-paced course teaches PowerShell fundamentals, objects, pipelines, scripting, files, error handling, remoting, REST APIs, and a final automation project.</p>
+          <div class="hero-actions">
+            <button id="startButton" class="primary-button">Start course</button>
+            <button id="continueButton" class="secondary-button">Continue learning</button>
+          </div>
+        </div>
+        <div class="terminal-card" aria-label="PowerShell example">
+          <div class="terminal-dots">● ● ●</div>
+          <pre><code><span class="prompt">PS&gt;</span> Get-Process |
+  Sort-Object CPU -Descending |
+  Select-Object -First 5</code></pre>
+        </div>
+      </section>
+
+      <section id="dashboard" class="dashboard-grid">
+        <article class="stat-card"><strong>10</strong><span>Lessons</span></article>
+        <article class="stat-card"><strong>30+</strong><span>Practice tasks</span></article>
+        <article class="stat-card"><strong>10</strong><span>Lesson quizzes</span></article>
+        <article class="stat-card"><strong>1</strong><span>Capstone project</span></article>
+      </section>
+
+      <section id="lessonContainer" class="lesson-container" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <footer>
+    <p>PowerShell Path • Progress is saved on this device • Works offline after first visit</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
