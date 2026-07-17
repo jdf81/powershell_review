@@ -26,8 +26,4 @@ npx serve .
 
 Then open `http://localhost:8000`.
 
-## Deploy
-Upload the folder to GitHub Pages, Netlify, Vercel, Azure Static Web Apps, or any HTTPS static host.
 
-## Notes
-The curriculum is educational. Test administrative commands in an authorized lab environment and review scripts before running them.
